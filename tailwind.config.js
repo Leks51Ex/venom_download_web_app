@@ -28,43 +28,13 @@ module.exports = {
           700: "#1d4ed8",
           800: "#1e40af",
           900: "#1e3a8a",
+          backgroundcolor: '#131313',
+          textColor: '#A1A1AA',
+          downloadButtonColor: '#4338CA',
+          buttonTextColor: '#F0FDFA',
+          infoTextColor: '#FFFFFF'
+          
         },
-      },
-      fontFamily: {
-        body: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "system-ui",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "Noto Sans",
-          "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
-        ],
-        sans: [
-          "Inter",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          "system-ui",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Arial",
-          "Noto Sans",
-          "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
-        ],
       },
       borderWidth: {
         DEFAULT: "1px",
@@ -82,6 +52,8 @@ module.exports = {
         ...defaultTheme.width,
       },
     },
+
+ 
   },
   plugins: [],
   future: {

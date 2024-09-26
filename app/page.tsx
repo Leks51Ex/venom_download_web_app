@@ -1,65 +1,43 @@
-import { Metadata } from "next"
-import { Button } from "components/Button/Button"
-import { LP_GRID_ITEMS } from "lp-items"
+import { Button } from "components/Button/Button";
+import Logotype from "components/Logotype";
+import FooterLogo  from "components/FooterLogo";
+import { FileDown } from "lucide-react";
+import dataSlider from "app/data/slider-data.json";
+import FeaturesView from "./FeaturesView";
 
-export const metadata: Metadata = {
-  title: "Next.js Enterprise Boilerplate",
-  twitter: {
-    card: "summary_large_image",
-  },
-  openGraph: {
-    url: "https://next-enterprise.vercel.app/",
-    images: [
-      {
-        width: 1200,
-        height: 630,
-        url: "https://raw.githubusercontent.com/Blazity/next-enterprise/main/.github/assets/project-logo.png",
-      },
-    ],
-  },
-}
 
-export default function Web() {
+
+
+export default function MainPage() {
   return (
-    <>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto grid max-w-screen-xl px-4 py-8 text-center lg:py-16">
-          <div className="mx-auto place-self-center">
-            <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl xl:text-6xl">
-              Next.js Enterprise Boilerplate
-            </h1>
-            <p className="mb-6 max-w-2xl font-light text-gray-500 dark:text-gray-400 md:text-lg lg:mb-8 lg:text-xl">
-              Jumpstart your enterprise project with our feature-packed, high-performance Next.js boilerplate!
-              Experience rapid UI development, AI-powered code reviews, and an extensive suite of tools for a smooth and
-              enjoyable development process.
-            </p>
-            <Button href="https://github.com/Blazity/next-enterprise" className="mr-3">
-              Get started
-            </Button>
-            <Button
-              href="https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise"
-              intent="secondary"
-            >
-              Deploy Now
+    <main className="main-page">
+      <div className="container mx-auto h-svh lg:h-96 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center ">
+          <Logotype className="w-72 h-30  md:w-56 mx-auto" />
+
+          <div className="relative z-20 mt-8">
+
+            <div className="shiny-bg absolute w-64 h-64 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
+            <Button as={'button'}>
+              <FileDown className="w-5 h-5 mr-2" />
+              Установить приложение
             </Button>
           </div>
+
+          <p className="description w-80">
+            Только Android. После скачивания необходимо разрешить установку из непроверенных источников.
+          </p>
         </div>
-      </section>
-      <section className="bg-white dark:bg-gray-900">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
-          <div className="justify-center space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
-            {LP_GRID_ITEMS.map((singleItem) => (
-              <div key={singleItem.title} className="flex flex-col items-center justify-center text-center">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-primary-100 p-1.5 text-blue-700 dark:bg-primary-900 lg:h-12 lg:w-12">
-                  {singleItem.icon}
-                </div>
-                <h3 className="mb-2 text-xl font-bold dark:text-white">{singleItem.title}</h3>
-                <p className="text-gray-500 dark:text-gray-400">{singleItem.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  )
+      </div>
+      <div className="info-card__title px-2 text-balance lg:pl-80">Легкий способ  наблюдать за главным</div>
+      <div className="info-card__content px-2 py-3 lg:pl-80">Откройте для себя систему мониторинга вашего флота </div>
+      <div className="relative px-2 pb-2 py-2 lg:pl-80">
+        <FeaturesView data={dataSlider} />
+      </div>
+      <footer className="text-primary-textColor px-2 pt-8 pb-2 lg:pl-80 flex items-center space-x-2">
+  <FooterLogo className="mx-auto"/>
+  <span>СИР Технологии 2024</span>
+</footer>
+    </main>
+  );
 }

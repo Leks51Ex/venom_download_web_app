@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .main-page {
+        @apply bg-primary-backgroundcolor;
+    }
+
+    .description {
+        @apply text-center;
+        @apply text-primary-textColor;
+        @apply mt-8;
+        @apply text-base;
+        @apply leading-5;
+    
+    }
+
+    .downloadbutton {
+        @apply bg-primary-downloadButtonColor;
+        @apply rounded-md;
+        @apply py-2;
+        @apply text-primary-buttonTextColor;
+    }
+
+    .shiny-bg {
+        @apply rounded-full;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(39, 248, 2, 0.389) 0%, rgba(0, 0, 0, 0) 79.75%);
+
+    }
+    
+    /* -------------------------------- Info Card ------------------------------- */
+    .info-card {
+        @apply rounded-lg;
+        @apply px-4;
+        @apply py-7;
+        @apply lg:w-80;
+        @apply text-white;
+        background: linear-gradient(338.97deg, #00B37D 0%, #004766 100%);
+    }
+
+    .info-card__subtitle {
+        @apply text-primary-infoTextColor;
+        @apply uppercase;
+        @apply font-medium;
+        @apply text-base;
+        @apply leading-5;
+        
+    }
+
+    .info-card__title {
+        @apply text-primary-infoTextColor;
+        @apply font-bold;
+        @apply text-base;
+        @apply leading-5;
+        @apply text-xl;
+        @apply py-1;
+    }
+
+    .info-card__content {
+        @apply text-primary-infoTextColor;
+        @apply py-2;
+        @apply pr-2;
+        @apply text-lg;
+        @apply leading-6;
+        @apply whitespace-pre-line;
+    }
+
+
+}
